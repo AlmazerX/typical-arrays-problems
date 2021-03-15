@@ -1,27 +1,30 @@
-function max(arr){
- var max = arr[0];
- for(var i=1; i<arr.length; i++){
-   if(arr[i] > max){
-     max = arr[i];   
+exports.min = function min (array) {
+var min = array[0];
+ for(var i=1; i<array.length; i++){
+   if(array[i] < min){
+     min = array[i];   
    }
   }
-return max;
-}
-function min(arr){
- var min = arr[0];
- for(var i=1; i<arr.length; i++){
-   if(arr[i] < min){
-     min = arr[i];   
-   }
-  }
-return min;
+  return min;
 }
 
-function avg(arr){
+exports.max = function max (array) {
+     var max = array[0];
+ for(var i=1; i<array.length; i++)
+ {
+   if(array[i] > max)
+   {
+     max = array[i];   
+   }
+  }
+  return max;
+}
+
+exports.avg = function avg (array) {
  var avg;
  var sum = 0;
- for(var i=0; i<arr.length; i++){
-   sum+=arr[i];
+ for(var i=0; i<array.length; i++){
+   sum+=array[i];
   }
-return avg=sum/arr.length;
+return avg=sum/array.length;
 }
